@@ -1,5 +1,8 @@
 # PdoTimezoneHelper
 
+[![Build Status](https://travis-ci.org/heiglandreas/PdoTimezoneHelper.svg?branch=master)](https://travis-ci.org/heiglandreas/PdoTimezoneHelper)
+[![Coverage Status](https://coveralls.io/repos/github/heiglandreas/PdoTimezoneHelper/badge.svg?branch=master)](https://coveralls.io/github/heiglandreas/PdoTimezoneHelper?branch=master)
+
 A small library to ease handling of timezones with PDO
 
 ## Usage
