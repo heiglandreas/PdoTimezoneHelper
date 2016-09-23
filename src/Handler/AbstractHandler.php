@@ -31,7 +31,6 @@ namespace Org_Heigl\PdoTimezoneHelper\Handler;
 
 abstract class AbstractHandler implements PdoTimezoneHandlerInterface
 {
-
     protected $timezoneField;
 
     public function setTimezoneField($field)
