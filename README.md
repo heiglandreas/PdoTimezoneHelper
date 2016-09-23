@@ -27,3 +27,7 @@ This lib is best installed using [composer](https://getcomposer.org):
 composer require org_heigl/pdo_timezone_helper
 ```
 
+## References:
+
+* https://andreas.heigl.org/2016/04/18/timezones-and-mysql/
+* https://andreas.heigl.org/2016/05/29/timezones-and-postgresql/
