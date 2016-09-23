@@ -9,5 +9,14 @@
             "email": "andreas@heigl.org"
         }
     ],
-    "require": {}
+    "autoload" : {
+        "psr-4" : {
+            "Org_Heigl\\PdoTimezoneHelper\\" : "/src"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Org_Heigl\\PdoTimezoneHelperTest\\" : "/tests"
+        }
+    }
 }
