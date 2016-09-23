@@ -1,0 +1,13 @@
+{
+    "name": "org_heigl/pdo_timezone_helper",
+    "description": "Helper for timezone-handling in databases",
+    "type": "lib",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Heigl",
+            "email": "andreas@heigl.org"
+        }
+    ],
+    "require": {}
+}
