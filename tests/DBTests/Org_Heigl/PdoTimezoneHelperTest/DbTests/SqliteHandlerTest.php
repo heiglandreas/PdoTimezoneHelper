@@ -52,10 +52,8 @@ class SqliteHandlerTest extends \PHPUnit_Extensions_Database_TestCase
         return $this->createXMLDataSet(__DIR__.'/_files/sqlite-timezone-seed.xml');
     }
 
-
     public function testDataBaseConnection()
     {
-
         $queryTable = $this->getConnection()->createQueryTable(
             'test', 'SELECT * FROM test'
         );
@@ -76,6 +74,6 @@ class SqliteHandlerTest extends \PHPUnit_Extensions_Database_TestCase
         );
 
         $this->assertEquals('2010-04-24 15:15:23', $con->getValue(0, 'datetime'));
-        $this->assertEquals('2010-04-26 19:14:20', $con->getValue(1,'datetime'));
+        $this->assertEquals('2010-04-26 19:14:20', $con->getValue(1, 'datetime'));
     }
 }

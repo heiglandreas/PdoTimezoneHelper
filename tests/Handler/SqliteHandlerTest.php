@@ -33,7 +33,6 @@ use Org_Heigl\PdoTimezoneHelper\Handler\SqliteHandler;
 
 class SqliteHandlerTest extends \PHPUnit_Framework_TestCase
 {
-
     public function testThatCreatingAnSqliteHanderRaisesAWarning()
     {
         try {
@@ -59,7 +58,7 @@ class SqliteHandlerTest extends \PHPUnit_Framework_TestCase
     {
         $handler = @new SqliteHandler();
 
-        $this->assertEquals('datetime(`foo`)' , @$handler->getUtcDateTime('foo', 'bar'));
+        $this->assertEquals('datetime(`foo`)', @$handler->getUtcDateTime('foo', 'bar'));
     }
 
     public function testThatCallingGetUtcDateTimeReturnsDecentData()

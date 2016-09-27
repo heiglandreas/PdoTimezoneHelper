@@ -56,7 +56,6 @@ class MySQLHandlerTest extends \PHPUnit_Extensions_Database_TestCase
 
     public function testDataBaseConnection()
     {
-
         $queryTable = $this->getConnection()->createQueryTable(
             'test', 'SELECT * FROM test'
         );
@@ -72,14 +71,11 @@ class MySQLHandlerTest extends \PHPUnit_Extensions_Database_TestCase
         $con = $this->getConnection()->createQueryTable(
             'test', sprintf(
                 'SELECT %1$s as datetime FROM `test`',
-                @$handler->getUtcDateTime('datetime', 'timezone')
+                $handler->getUtcDateTime('datetime', 'timezone')
             )
         );
 
-        print_r($con->getRowCount());
-        print_r($con->getRow(0));
-
         $this->assertEquals('2010-04-24 15:15:23', $con->getValue(0, 'datetime'));
-        $this->assertEquals('2010-04-26 19:14:20', $con->getValue(1,'datetime'));
+        $this->assertEquals('2010-04-26 19:14:20', $con->getValue(1, 'datetime'));
     }
 }
