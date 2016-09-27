@@ -40,6 +40,7 @@ class MySQLHandlerTest extends \PHPUnit_Extensions_Database_TestCase
     {
         if ($this->pdo === null) {
             $this->pdo = new \PDO($GLOBALS['MYSQL_DB_DSN'], $GLOBALS['MYSQL_DB_USER'], $GLOBALS['MYSQL_DB_PASSWD']);
+            $this->pdo->query('CREATE TABLE IF NOT EXISTS `test` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT, `datetime` datetime DEFAULT NULL, `timezone` varchar(255) DEFAULT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;');
         }
         return $this->createDefaultDBConnection($this->pdo, $GLOBALS['MYSQL_DB_DBNAME']);
     }

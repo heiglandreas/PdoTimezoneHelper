@@ -41,6 +41,7 @@ class PostgreSQLHandlerTest extends \PHPUnit_Extensions_Database_TestCase
     {
         if ($this->pdo === null) {
             $this->pdo = new \PDO($GLOBALS['POSTGRES_DB_DSN'], $GLOBALS['POSTGRES_DB_USER'], $GLOBALS['POSTGRES_DB_PASSWD']);
+            $this->pdo->query('CREATE TABLE IF NOT EXISTS public.test (id integer, datetime timestamp without time zone, timezone character varying(255)) WITH (OIDS=FALSE);');
         }
         return $this->createDefaultDBConnection($this->pdo, $GLOBALS['POSTGRES_DB_DBNAME']);
     }

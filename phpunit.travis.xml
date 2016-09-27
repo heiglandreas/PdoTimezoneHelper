@@ -13,8 +13,18 @@
     </testsuite>
 
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+        <whitelist processUncoveredFilesFromWhitelist="false">
             <directory suffix=".php">src</directory>
         </whitelist>
     </filter>
+    <php>
+        <var name="MYSQL_DB_DSN" value="mysql:dbname=pdotimezonetest;host=localhost" />
+        <var name="MYSQL_DB_USER" value="root" />
+        <var name="MYSQL_DB_PASSWD" value="" />
+        <var name="MYSQL_DB_DBNAME" value="pdotimezonetest" />
+        <var name="POSTGRES_DB_DSN" value="pgsql:dbname=pdotimezonetest;host=localhost" />
+        <var name="POSTGRES_DB_USER" value="postgres" />
+        <var name="POSTGRES_DB_PASSWD" value="" />
+        <var name="POSTGRES_DB_DBNAME" value="pdotimezonetest" />
+    </php>
 </phpunit>

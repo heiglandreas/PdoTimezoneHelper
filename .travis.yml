@@ -1,4 +1,7 @@
 sudo: false
+services:
+  - postgresql
+  - mysql
 language: php
 matrix:
   include:
@@ -13,6 +16,10 @@ matrix:
   allow_failures:
   - php: hhvm
   - php: nightly
+
+before-script:
+  - mysql -e "create database IF NOT EXISTS pdotimezonetest;" -uroot
+  - psql -c 'create database pdotimezonetest;' -U postgres
 before_install:
 - if [[ $EXECUTE_TEST_COVERALLS != 'true' ]]; then phpenv config-rm xdebug.ini ||
   return 0 ; fi
