@@ -13,7 +13,7 @@
     </testsuite>
 
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+        <whitelist processUncoveredFilesFromWhitelist="false">
             <directory suffix=".php">src</directory>
         </whitelist>
     </filter>
@@ -25,5 +25,14 @@
         <log type="coverage-clover" target="build/logs/clover.xml"/>
         <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>
     </logging>
-
+    <php>
+        <var name="MYSQL_DB_DSN" value="mysql:dbname=pdotimezonetest;host=localhost" />
+        <var name="MYSQL_DB_USER" value="username" />
+        <var name="MYSQL_DB_PASSWD" value="password" />
+        <var name="MYSQL_DB_DBNAME" value="timezonetest" />
+        <var name="POSTGRES_DB_DSN" value="pgsql:dbname=pdotimezonetest;host=localhost" />
+        <var name="POSTGRES_DB_USER" value="username" />
+        <var name="POSTGRES_DB_PASSWD" value="password" />
+        <var name="POSTGRES_DB_DBNAME" value="timezonetest" />
+    </php>
 </phpunit>
