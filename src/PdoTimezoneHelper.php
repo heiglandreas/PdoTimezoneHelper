@@ -38,7 +38,7 @@ class PdoTimezoneHelper
 {
     protected static $supportedDrivers = [
         'mysql'    => \Org_Heigl\PdoTimezoneHelper\Handler\MysqlHandler::class,
-        'postgres' => \Org_Heigl\PdoTimezoneHelper\Handler\PostgresqlHandler::class,
+        'pgsql' => \Org_Heigl\PdoTimezoneHelper\Handler\PostgresqlHandler::class,
         'sqlite' => \Org_Heigl\PdoTimezoneHelper\Handler\SqliteHandler::class,
     ];
 

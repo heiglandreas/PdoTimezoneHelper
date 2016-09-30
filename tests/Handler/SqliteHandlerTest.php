@@ -60,9 +60,4 @@ class SqliteHandlerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals('datetime(`foo`)', @$handler->getUtcDateTime('foo', 'bar'));
     }
-
-    public function testThatCallingGetUtcDateTimeReturnsDecentData()
-    {
-        $pdo = new \PDO('sqlite::memory:');
-    }
 }
