@@ -68,7 +68,6 @@ class PdoTimezoneHelperTest extends \PHPUnit_Framework_TestCase
             $this->assertInstanceOf('\PHPUnit_Framework_Error_Warning', $e);
             $this->assertEquals('Using the Sqlite-Handler will result in unexpected behaviours as there is no server-sided Timezone-handling! Use at your own risk!', $e->getMessage());
         }
-
     }
 
     public function testThatCreationOfAnUnknownHandlerRaisesAnException()
